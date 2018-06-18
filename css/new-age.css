@@ -544,3 +544,6 @@ code {
   background: -webkit-linear-gradient(to left, #400, #004);
   background: linear-gradient(to left, #400, #004);
 }
+p a, p a:visited, p a:focus {
+  color: #004;
+}
