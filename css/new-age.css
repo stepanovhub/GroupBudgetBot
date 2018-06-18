@@ -159,13 +159,13 @@ header.masthead {
   padding-bottom: 100px;
   color: white;
   text-align: center;
-  background: url("../img/bg-pattern.png"), #5960A2;
+  background: url("../img/dimension.png"), #5960A2;
 /*
   background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #5960A2, #AE4945);
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #5960A2, #AE4945);
 */
-background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #5050a0, #b05050);
-background: url("../img/bg-pattern.png"), linear-gradient(to left, #5050a0, #b05050);
+background: url("../img/dimension.png"), -webkit-linear-gradient(to left, #400, #004);
+background: url("../img/dimension.png"), linear-gradient(to left, #400, #004);
 }
 
 header.masthead .header-content {
@@ -446,7 +446,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .retina img {
     width: 50%;
 }
-
+/*
 .logo-top {
   background-image:url("../img/digital budget - white bg.png");
   width: 200px;
@@ -454,7 +454,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+*/
 .categories {
   display: none;
 }
@@ -463,7 +463,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     display: block;
   }
 }
-
+/*
 @media (min-width: 992px) {
   .logo-top {
     background-image:url("../img/digital budget - black bg.png");
@@ -473,7 +473,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .navbar-shrink .logo-top  {
   background-image:url("../img/digital budget - white bg.png");
 }
-
+*/
 .text-center div {
   text-align: center;
 }
@@ -496,13 +496,6 @@ li i, .contact i  {
   background-position: center;
   background-size: contain;
   margin: 20px auto;
-}
-.sw-logo{
-  background-image:url("../img/sw-logo.png");
-}
-.db-logo {
-  background-image:url("../img/digital budget - white bg.png");
-
 }
 h1 {
   margin: 30px auto;
