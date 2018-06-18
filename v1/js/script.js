@@ -3,9 +3,12 @@ $(function() {
   drawPieChart("#flot-pie-chart", expences)
   $("#total-income").text(formatNumber(totalIncome));
   $("#total-spent").text(formatNumber(totalSpent));
+  drawTable("#table-spent", expences);
+  setFilters("#filter-tags", "#filter-tag-current", incomes, expences);
 });
 
 var incomes = [],  expences = [];
+var tags = [];
 var totalIncome = 0, totalSpent = 0;
 var startDate, endDate;
 
@@ -81,6 +84,43 @@ function drawPieChart(layer_id, data) {
     }*/
   });
 };
+
+function drawTable(id, data) {
+  for (var i = 0; i < data.length; i++) {
+    $(id).append("<tr><td>" + formatNumber(data[i].data) + "</td><td><div style='width:" + (Math.abs(totalSpent) > 0 ? 100 * data[i].data / totalSpent : 0) + "%; background-color:#dd9;'>" + data[i].label + "</div></td></tr>");
+  }
+}
+
+function setFilters(id, choosen_id, incomes, expences) {
+  for (var i = 0; i < incomes.length; i++){
+    $(id).append("<li class='filter-tag' data-tag='" + incomes[i].label + "' data-amount='" + incomes[i].data + "'><a>#" + incomes[i].label + "</a></li>");
+  }
+  $(id).append('<li role="separator" class="divider"></li>');
+  for (var i = 0; i < expences.length; i++){
+    $(id).append("<li class='filter-tag' data-tag='" + expences[i].label + "' data-amount='" + expences[i].data + "'><a>#" + expences[i].label + "</a></li>");
+  }
+  $(".filter-tag").click(function () {
+    $(choosen_id).text("#" + $(this).data("tag") + " (total: "  + $(this).data("amount") + ")")
+    refreshTransactions($(this).data("tag"));
+  })
+}
+
+function refreshTransactions(tag) {
+  $("#table-transactions").empty();
+  var t, _tag
+  for (var i = 0; i < transactions.length, t = transactions[i]; i++){
+    for (var j = 0; j < t.tags.length, _tag = t.tags[j]; j++){
+      if (_tag.toLowerCase() == tag) {
+        $("#table-transactions").append(
+          "<tr><td>" + t.datetime + "</td>" +
+          "<td>" + t.amount + "</td>" +
+          "<td>" + tag + "</td>" +
+          "<td>" + t.comment + "</td>" +
+          "<td>" + t.user + "</td></tr>");
+      }
+    }
+  }
+}
 
 //Flot Multiple Axes Line Chart
 function drawLineChart() {

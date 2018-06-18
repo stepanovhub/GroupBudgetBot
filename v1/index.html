@@ -58,10 +58,10 @@
     </div>
     <!-- /.row -->
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-            Pie Chart Example
+            Spents Pie By Tags
           </div>
           <div class="panel-body">
             <div class="flot-chart">
@@ -70,7 +70,76 @@
           </div>
         </div>
       </div>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Spents By Tags
+          </div>
+          <div class="panel-body">
+            <div class="container">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Spent</th>
+                    <th>Tag</th>
+                  </tr>
+                </thead>
+                <tbody id="table-spent">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Transactions
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Choose Tag
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="filter-tags">
+              </ul>
+            </div>
+            <b><span id="filter-tag-current"></span></b>
+          </div>
+          <div class="panel-body">
+            <div class="container">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Tag</th>
+                    <th>Comment</th>
+                    <th>User</th>
+                  </tr>
+                </thead>
+                <tbody id="table-transactions">
+                  <tr>
+                    <td>20.06</td>
+                    <td>-500</td>
+                    <td>kjnkjnjknlnj</td>
+                    <td>ljnklmnkljkljmn</td>
+                    <td>userrrrr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--
+    <div class="row">
       <div class="col-lg-6">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -89,20 +158,15 @@
           <div class="panel-heading">
             Bar Chart Example
           </div>
-          <!-- /.panel-heading -->
           <div class="panel-body">
             <div class="flot-chart">
               <div class="flot-chart-content" id="flot-bar-chart"></div>
             </div>
           </div>
-          <!-- /.panel-body -->
         </div>
-        <!-- /.panel -->
       </div>
-      <!-- /.col-lg-6 -->
     </div>
-    <!-- /.row -->
-
+  -->
   </div>
   <!-- /#wrapper -->
 
@@ -115,9 +179,9 @@
   <!-- Metis Menu Plugin JavaScript -->
   <script src="./vendor/metisMenu/metisMenu.min.js"></script>
 
-  <!-- Moments JavaScript -->
-  <script src="./vendor/moments/moments.min.js"></script>
-
+  <!-- Moments JavaScript
+    <script src="./vendor/moments/moments.min.js"></script>
+-->
   <!-- Flot Charts JavaScript -->
   <script src="./vendor/flot/excanvas.min.js"></script>
   <script src="./vendor/flot/jquery.flot.js"></script>
