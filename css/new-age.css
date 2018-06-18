@@ -538,3 +538,9 @@ h1 {
   max-width: 100%;
   height: auto;
 }
+
+code {
+  color: #fff;
+  background: -webkit-linear-gradient(to left, #400, #004);
+  background: linear-gradient(to left, #400, #004);
+}
