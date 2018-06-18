@@ -112,7 +112,7 @@ function refreshTransactions(tag) {
     for (var j = 0; j < t.tags.length, _tag = t.tags[j]; j++){
       if (_tag.toLowerCase() == tag) {
         $("#table-transactions").append(
-          "<tr><td>" + "01.06" + "</td>" +
+          "<tr><td>" + "01.06.18" + "</td>" +
           "<td>" + t.amount + "</td>" +
           "<td>" + t.comment + "</td>" +
           "<td>" + t.user + "</td></tr>");
